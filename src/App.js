@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // const { electron } = window.electron;
+  const { shell } = window.electron.electron
+  const onlink = function(){
+    console.log(window.electron.electron)
+    shell.openExternal('https://www.baidu.com')
+    alert('fasdfas')
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='link' onClick={ onlink }>
+        我是跳转
+      </div>
     </div>
   );
 }
