@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import RouterCom from './router';
-import './index.css';
-
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import RouterCom from './router'
+import './index.css'
+import reportWebVitals from './reportWebVitals'
+import { Provider } from 'react-redux'
+import store from './Stroe'
 
 ReactDOM.render(
-  <RouterCom />,
+  <Provider store = { store }>
+    <RouterCom />
+  </Provider>,
   document.getElementById('root')
 );
 // render(<Router/>, document.getElementById('app'));
